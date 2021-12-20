@@ -12,7 +12,7 @@ const StatisticTable = (props) => {
     {
       title: '测量时间',
       dataIndex: 'time',
-      width: '11%',
+      width: '21%',
     },
     {
       title: '仪器温度',
@@ -27,27 +27,27 @@ const StatisticTable = (props) => {
     {
       title: 'COD 波长',
       dataIndex: 'cod',
-      width: '11%',
+      width: '10%',
     },
     {
       title: 'TSS 波长',
       dataIndex: 'tss',
-      width: '11%',
+      width: '10%',
     },
     {
       title: '参考修正系数',
       dataIndex: 'refcorfac',
-      width: '11%',
+      width: '8%',
     },
     {
       title: '硝酸根修正系数',
       dataIndex: 'no3corfac',
-      width: '11%',
+      width: '10%',
     },
     {
       title: '浊度修正系数',
       dataIndex: 'turcorfac',
-      width: '12%',
+      width: '8%',
     },
   ];
 

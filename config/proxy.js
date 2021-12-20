@@ -1,7 +1,7 @@
 export default {
     dev: {
         '/sensor': {
-            target: 'https://10.92.214.187:7890/',
+            target: 'http://10.92.214.187:7890/',
             changeOrigin: true,
             pathRewrite: { '^': '' },
             secure: false,

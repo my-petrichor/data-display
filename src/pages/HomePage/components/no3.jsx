@@ -1,26 +1,24 @@
 import { Line } from '@ant-design/charts';
 import React from 'react';
 
-const DynamicChart = (props) => {
+const NO3Chart = (props) => {
   const { data } = props;
 
-  console.log(data, 'data');
   const config = {
     data,
     xField: 'time',
     yField: 'value',
-    seriesField: 'type',
     xAxis: false,
-    color: ({ type }) => {
-      switch (type) {
-        case 'NO3':
-          return '#9BE8E8';
-        case 'TSS':
-          return '#9E9BEB';
-        case 'COD':
-          return '#9C1CEB';
-      }
-    },
+    // color: ({ type }) => {
+    //   switch (type) {
+    //     case 'NO3':
+    //       return '#b37feb';
+    //     case 'TSS':
+    //       return '#87e8de';
+    //     case 'COD':
+    //       return '#ffa940';
+    //   }
+    // },
 
     smooth: false,
     animation: {
@@ -34,4 +32,4 @@ const DynamicChart = (props) => {
   return <Line {...config} />;
 };
 
-export default DynamicChart;
+export default NO3Chart;

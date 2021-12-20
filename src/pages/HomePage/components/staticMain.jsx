@@ -15,9 +15,9 @@ const StaticMainChart = (props) => {
     color: ({ name }) => {
       switch (name) {
         case 'ZeroMain':
-          return '#9BE8E8';
+          return '#ffa940';
         case 'MeasureMain':
-          return '#9E9BEB';
+          return '#d3f261';
       }
     },
     slider: {

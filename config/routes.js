@@ -1,7 +1,7 @@
 export default [{
         name: 'home',
         path: '/home',
-        icon: 'crown',
+        icon: 'areaChart',
         component: './HomePage',
     },
     {

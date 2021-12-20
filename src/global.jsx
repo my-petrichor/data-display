@@ -1,5 +1,4 @@
-import { Button, message, notification } from 'antd';
-import { useIntl } from 'umi';
+import { Button } from 'antd';
 import defaultSettings from '../config/defaultSettings';
 const { pwa } = defaultSettings;
 const isHttps = document.location.protocol === 'https:';
@@ -30,19 +29,15 @@ if (pwa) {
 
   window.addEventListener('sw.updated', (event) => {
     const e = event;
-
     const reloadSW = async () => {
       // Check if there is sw whose state is waiting in ServiceWorkerRegistration
       // https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration
       const worker = e.detail && e.detail.waiting;
-
       if (!worker) {
         return true;
       } // Send skip-waiting event to waiting SW with MessageChannel
-
       await new Promise((resolve, reject) => {
         const channel = new MessageChannel();
-
         channel.port1.onmessage = (msgEvent) => {
           if (msgEvent.data.error) {
             reject(msgEvent.data.error);
@@ -50,7 +45,6 @@ if (pwa) {
             resolve(msgEvent.data);
           }
         };
-
         worker.postMessage(
           {
             type: 'skip-waiting',
@@ -62,7 +56,6 @@ if (pwa) {
       window.location.reload();
       return true;
     };
-
     const key = `open${Date.now()}`;
     const btn = (
       <Button

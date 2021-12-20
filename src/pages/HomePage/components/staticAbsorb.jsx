@@ -9,12 +9,12 @@ const StaticAbsorbChart = (props) => {
     yField: 'value',
     yAxis: {
       max: 2,
-      title: {
-        text: 'density',
-      },
-      label: {
-        formatter: (v) => `${v}`.replace(/\d{1,3}(?=(\d{3})+$)/g, (s) => `${s},`),
-      },
+      // title: {
+      //   text: 'density',
+      // },
+      // label: {
+      //   formatter: (v) => `${v}`.replace(/\d{1,3}(?=(\d{3})+$)/g, (s) => `${s},`),
+      // },
     },
     slider: {
       start: 0.1,

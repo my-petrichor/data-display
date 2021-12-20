@@ -19,9 +19,9 @@ const StaticRefChart = (props) => {
     color: ({ name }) => {
       switch (name) {
         case 'ZeroRef':
-          return '#9BE8E8';
+          return '#87e8de';
         case 'MeasureRef':
-          return '#9E9BEB';
+          return '#b37feb';
       }
     },
     smooth: false,
